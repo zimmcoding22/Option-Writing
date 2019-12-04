@@ -10,7 +10,6 @@ import pandas as pd
 import threading
 import math
 
-
 class TestApp(wrapper.EWrapper, EClient):
     def __init__(self):
         wrapper.EWrapper.__init__(self)
@@ -54,7 +53,6 @@ class TestApp(wrapper.EWrapper, EClient):
             fields = [[TickTypeEnum.LAST, "last"], [TickTypeEnum.BID, "bid"], [TickTypeEnum.ASK, "ask"], [TickTypeEnum.HIGH, "high"], [TickTypeEnum.LOW, "low"]]
             for field in fields:
                 store_data(field, i, contracts, tickType, reqId, price)
-
 
 def store_data(field, idx, df, ticker_type, req_id, price):
     tt, col = 0, 1
@@ -108,29 +106,13 @@ for index, row in contracts.iterrows():
     thread.start()
     jobs.append(thread)
 
-
 print(jobs)
-
 
 for j in jobs:
     j.join()
 
 print("total num requests: ", num_requests)
-##thread_one = threading.Thread(target=function, args=(contracts.loc[0, ["ticker"]].values[0], app, 0))
-##thread_two = threading.Thread(target=function, args=(contracts.loc[2, ["ticker"]].values[0], app, 2))
-##thread_one.start()
-##thread_two.start()
-###app.done = True
-##thread_one.join()
-##thread_two.join()
 
-    
-##    function(row["ticker"], app, index)
-##    app.run()
-    #app.done = True
-    #app = TestApp()
-    #app.connect("127.0.0.1", socket_port, clientId=123)
-    
 end_time = time.time()
 final = end_time - start_time
 print("total time elapsed: %.2f" % (final))
