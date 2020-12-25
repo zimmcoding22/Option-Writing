@@ -2,7 +2,7 @@
 Uses Interactive Brokers native python api framework, build 9.73
 
 Selling options intraday on liquid underlyings like BABA, FB, AAPL, etc.
-This was initially done with naked options, but due to margin restrictions, it would have to be implemented with credit spreads.
+This was initially done with naked options, but due to margin restrictions, it had to be implemented with credit spreads.
 
 I've automated the execution of this strategy, but it is difficult to get options data and run checks for more than a few underlyings in a 
 timely enough fashion, since strikes must be requested in individual slices.
