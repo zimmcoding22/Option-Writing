@@ -1,4 +1,4 @@
-# Daily-Option-Writing
+# Option-Writing
 Uses Interactive Brokers native python api framework, build 9.73
 
 Selling options intraday on liquid underlyings like BABA, FB, AAPL, etc.
