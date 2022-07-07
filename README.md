@@ -1,6 +1,8 @@
 # Option-Writing
 Uses Interactive Brokers native python api framework, build 9.73
 
+## Description
+
 Selling options intraday on liquid underlyings like BABA, FB, AAPL, etc.
 This was initially done with naked options, but due to margin restrictions, it had to be implemented with credit spreads.
 
